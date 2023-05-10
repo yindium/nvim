@@ -12,6 +12,7 @@ vim.cmd [[packadd packer.nvim]]
 -- PackerStatus - lists installed plugins
 -- PackerUpdate - updates plugins (!risky if commits have errors)
 -- PackerLoad {plugin} - loads the plugin immediately
+-- PackerSync - sync plugins
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
@@ -21,4 +22,7 @@ packer.startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
+  use 'morhetz/gruvbox'
+  use 'nvim-tree/nvim-tree.lua'
+  use 'nvim-treesitter/nvim-treesitter'
 end)

@@ -1,1 +1,1 @@
-One of the most messed up Neovim configuration ever.
+## One of the most messed up Neovim configuration ever.
