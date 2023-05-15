@@ -6,3 +6,5 @@ o.winblend = 0
 o.wildoptions = 'pum'
 o.pumblend = 5
 o.background = 'dark'
+-- [[ colorscheme = 'vim-code-dark' ]]
+

@@ -22,7 +22,13 @@ packer.startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
-  use 'morhetz/gruvbox'
   use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  } 
+  use 'tomasiser/vim-code-dark'
 end)

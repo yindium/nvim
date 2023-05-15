@@ -13,4 +13,3 @@ end
 if is_win then
   vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 end
-

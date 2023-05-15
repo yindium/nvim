@@ -6,7 +6,15 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
-require("nvim-tree").setup()
+-- require("nvim-tree").setup()
+
+-- Options (while tree is opened)
+-- a: append/create a file
+-- r: rename a file
+-- d: delete a file, 'D' for trash
+-- c/x/p: copy, cut and paste
+
+
 
 -- OR setup with some options
 require("nvim-tree").setup({
@@ -21,4 +29,5 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
+
 vim.keymap.set('n', '<C-l>', ':NvimTreeToggle<CR>')
