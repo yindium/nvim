@@ -17,7 +17,9 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'jiangmiao/auto-pairs'
+  use 'folke/tokyonight.nvim'
   use 'nvim-tree/nvim-web-devicons'
+  use "lukas-reineke/indent-blankline.nvim"
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
@@ -30,5 +32,20 @@ packer.startup(function(use)
       ts_update()
     end,
   } 
-  use 'tomasiser/vim-code-dark'
+  use {
+    'akinsho/bufferline.nvim',
+    tag = "*",
+    requires = 'nvim-tree/nvim-web-devicons'
+  }
+  use({
+    "utilyre/barbecue.nvim",
+    tag = "*",
+    requires = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    config = function()
+      require("barbecue").setup()
+    end,
+  })
 end)
