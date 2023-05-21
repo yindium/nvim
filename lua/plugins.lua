@@ -69,4 +69,6 @@ packer.startup(function(use)
   use 'hrsh7th/nvim-cmp'
   -- snippet engine
   use 'L3MON4D3/LuaSnip'
+  -- git signs
+  use 'lewis6991/gitsigns.nvim'
 end)

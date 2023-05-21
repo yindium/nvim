@@ -5,7 +5,6 @@ require('mason-lspconfig').setup({
 })
 
 lsp.lua_ls.setup {
-  on_attach = on_attach,
   settings = {
     Lua = {
       runtime = {
