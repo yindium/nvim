@@ -29,7 +29,7 @@ packer.startup(function(use)
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
   -- treesitter
   use {
@@ -71,4 +71,10 @@ packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   -- git signs
   use 'lewis6991/gitsigns.nvim'
+  use 'windwp/nvim-ts-autotag'
+  use 'norcalli/nvim-colorizer.lua'
+  use 'jose-elias-alvarez/null-ls.nvim' -- use Neovim as a language server
+  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end }
 end)

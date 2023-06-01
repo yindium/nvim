@@ -1,7 +1,8 @@
-local lsp = require('lspconfig')
+local status, lsp = pcall(require, 'lspconfig')
+if (not status) then return end
 require("mason").setup()
 require('mason-lspconfig').setup({
-  ensure_installed = { 'lua_ls', 'clangd' }
+  ensure_installed = { 'lua_ls', 'clangd', 'tsserver' }
 })
 
 lsp.lua_ls.setup {
@@ -40,4 +41,11 @@ lsp.lua_ls.setup {
   },
 }
 
+-- c/c++
 lsp.clangd.setup{}
+
+-- typescript
+lsp.tsserver.setup{
+  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
+  cmd = { 'typescript-language-server', '--stdio' }
+}
