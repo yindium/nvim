@@ -34,7 +34,7 @@ o.numberwidth = 4                         -- set number column width to 2 {defau
 o.wrap = false                            -- display lines as one long line
 o.scrolloff = 8                           -- is one of my fav
 o.sidescrolloff = 8
--- o.guifont = "monospace:h17"               -- the font used in graphical neovim applications
+o.guifont = "monospace:h11"               -- the font used in graphical neovim applications
 
 o.shortmess:append "c"
 
@@ -42,3 +42,7 @@ o.shortmess:append "c"
 -- vim.cmd [[set iskeyword+=-]]
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
+if vim.g.neovide then
+    o.guifont = 'Hack NF:h11'
+    vim.g.neovide_transparency = 0.8
+end
