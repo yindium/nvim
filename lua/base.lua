@@ -35,7 +35,7 @@ o.wrap = false                            -- display lines as one long line
 o.scrolloff = 8                           -- is one of my fav
 o.sidescrolloff = 8
 o.guifont = "monospace:h11"               -- the font used in graphical neovim applications
-
+o.wrap = false
 o.shortmess:append "c"
 
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
@@ -43,6 +43,6 @@ o.shortmess:append "c"
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 if vim.g.neovide then
-    o.guifont = 'Hack NF:h11'
-    vim.g.neovide_transparency = 0.8
+  o.guifont = 'Hack NF:h11'
+  vim.g.neovide_transparency = 0.8
 end
