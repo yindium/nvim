@@ -85,7 +85,16 @@ local plugins = {
     init = function() vim.g.mkdp_filetypes = { "markdown" } end,
     ft = { "markdown" },
   },
-  'lervag/vimtex'
+  -- latex
+  'lervag/vimtex',
+  -- commenter
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      -- add any options here
+    },
+    lazy = false,
+  }
 }
 
 require("lazy").setup(plugins, {})
